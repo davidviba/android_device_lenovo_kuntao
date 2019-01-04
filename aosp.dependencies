@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "android_kernel_lenovo_silvercore",
+    "target_path": "kernel/lenovo/silvercore"
+  },
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
+  }
+]
