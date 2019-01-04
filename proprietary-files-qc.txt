@@ -592,8 +592,9 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# WIFI - from tissot 8.1.0 OPM1.171019.026
-vendor/bin/wcnss_service|183c15394d1d6df2e5f6d712df80b2b2aa9f5ea6
+# Wi-Fi - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
+vendor/bin/wcnss_service
+vendor/bin/move_wifi_data.sh
 
 # Wi-Fi Display
 bin/wfdservice
