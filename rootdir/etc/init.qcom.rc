@@ -88,6 +88,14 @@ on boot
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
 
+    # Dt2w gestures
+    chown system system /sys/board_properties/tpd_suspend_status
+    chmod 0664 /sys/board_properties/tpd_suspend_status
+
+    # Glove gestures
+    chown system system /sys/board_properties/tpd_glove_status
+    chmod 0664 /sys/board_properties/tpd_glove_status
+
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
