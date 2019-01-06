@@ -1016,6 +1016,7 @@ on post-fs-data
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
+    symlink /data/vendor/wifi/WCNSS_qcom_cfg.ini /data/misc/wifi/WCNSS_qcom_cfg.ini
 
     #Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
