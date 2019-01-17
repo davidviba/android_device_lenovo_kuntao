@@ -142,7 +142,6 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
 # DRM - Widevine - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
-vendor/bin/move_widevine_data.sh
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib/libwvhidl.so
@@ -154,19 +153,6 @@ vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/gatekeeper.msm8953.so
 
 # GPS - from Tissot PKQ1.180917.001 V10.0.2.0.PDHMIFK
-etc/permissions/com.qti.location.sdk.xml
-etc/permissions/com.qualcomm.location.xml
-etc/permissions/izat.xt.srv.xml
-framework/com.qti.location.sdk.jar
-framework/izat.xt.srv.jar
-lib64/liblocationservice_jni.so
-lib64/libxt_native.so
-lib64/vendor.qti.gnss@1.0.so
-lib64/vendor.qti.gnss@1.1.so
-lib64/vendor.qti.gnss@1.2.so
-lib64/vendor.qti.gnss@2.0.so
-lib64/vendor.qti.gnss@2.1.so
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -208,8 +194,10 @@ vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 
 # Graphics - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
-vendor/lib/libsdm-disp-apis.so
-vendor/lib64/libsdm-disp-apis.so
+-lib/vendor.display.color@1.0.so
+-lib64/vendor.display.color@1.0.so
+lib/libsdm-disp-apis.so
+lib64/libsdm-disp-apis.so
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -235,10 +223,6 @@ vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdmcore.so
 vendor/lib/libsdmutils.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.config@1.0.so
-vendor/lib/vendor.display.config@1.1.so
 -vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
@@ -267,10 +251,6 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmutils.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.config@1.0.so
-vendor/lib64/vendor.display.config@1.1.so
 -vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
@@ -280,8 +260,10 @@ vendor/lib/libhdr_tm.so
 vendor/lib64/libhdr_tm.so
 
 # Graphics (Postprocessing) - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
-etc/permissions/com.qti.snapdragon.sdk.display.xml
-framework/com.qti.snapdragon.sdk.display.jar
+vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml
+vendor/framework/com.qti.snapdragon.sdk.display.jar
+lib/vendor.display.postproc@1.0.so
+lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
 vendor/bin/mm-pp-dpps
@@ -291,10 +273,13 @@ vendor/lib/libdisp-aba.so
 vendor/lib/vendor.display.color@1.0.so
 vendor/lib/vendor.display.postproc@1.0.so
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
+lib64/vendor.display.postproc@1.0.so
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/lib64/vendor.display.color@1.0.so
 
 # Graphics (Vulkan) - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
 vendor/lib/hw/vulkan.msm8953.so
@@ -329,28 +314,13 @@ vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxApeDecSw.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
 -vendor/lib/libgpustats.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libOmxAacDec.so
-vendor/lib64/libOmxAlacDec.so
-vendor/lib64/libOmxAlacDecSw.so
-vendor/lib64/libOmxAmrDec.so
-vendor/lib64/libOmxAmrwbplusDec.so
-vendor/lib64/libOmxApeDec.so
-vendor/lib64/libOmxApeDecSw.so
-vendor/lib64/libOmxEvrcDec.so
-vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libOmxVpp.so
-vendor/lib64/libOmxWmaDec.so
 -vendor/lib64/libgpustats.so
-vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libvpplibrary.so
 
 # Modem - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
 vendor/lib/libwms.so
@@ -385,7 +355,7 @@ vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
 # Power-off alarm- from Daisy PKQ1.180917.001/V10.0.1.0.PDLMIFJ
-framework/vendor.qti.hardware.alarm-V1.0-java.jar
+vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
@@ -394,8 +364,8 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # QMI - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
-etc/permissions/qti_libpermissions.xml
-etc/permissions/qti_permissions.xml
+vendor/etc/permissions/qti_libpermissions.xml
+vendor/etc/permissions/qti_permissions.xml
 lib/libdiag_system.so
 lib/libqmi_cci_system.so
 lib64/libdiag_system.so
@@ -433,11 +403,11 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
 # Radio - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
--app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar
-framework/qcrilhook.jar
+-vendor/app/QtiTelephonyService/QtiTelephonyService.apk
+vendor/etc/permissions/qcrilhook.xml
+vendor/etc/permissions/telephonyservice.xml
+vendor/framework/QtiTelephonyServicelibrary.jar
+vendor/framework/qcrilhook.jar
 framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
@@ -594,7 +564,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Wi-Fi - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
 vendor/bin/wcnss_service
-vendor/bin/move_wifi_data.sh
 
 # Wi-Fi Display
 bin/wfdservice

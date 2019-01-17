@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- sweep2sleep -->
+    <string-array name="s2sArray">
+        <item>Devre dışı</item>
+        <item>Sağa kaydır</item>
+        <item>Sola kaydır</item>
+        <item>Sağa veya sola kaydır</item>
+    </string-array>
+    <string-array name="s2sValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- spectrum profiles -->
+    <string-array name="spectrum_profiles">
+        <item>Dengeli</item>
+        <item>Pil tasarrufu</item>
+        <item>Ultra pil tasarrufu</item>
+        <item>Performans</item>
+        <item>Oyun</item>
+    </string-array>
+    <string-array name="spectrum_values">
+        <item>0</item>
+        <item>2</item>
+        <item>4</item>
+        <item>1</item>
+        <item>3</item>
+    </string-array>
+
+</resources>
+

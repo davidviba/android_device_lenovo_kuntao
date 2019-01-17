@@ -17,7 +17,7 @@
 //#define LOG_NDEBUG 0
 #define LOG_TAG "FingerprintWrapper"
 
-#include <cutils/log.h>
+#include <log/log.h>
 
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
@@ -187,7 +187,7 @@ fingerprint_module_t HAL_MODULE_INFO_SYM = {
         .module_api_version = FINGERPRINT_MODULE_API_VERSION_2_1,
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = FINGERPRINT_HARDWARE_MODULE_ID,
-        .name = "Lineage Fingerprint Wrapper",
+        .name = "Kuntao Fingerprint Wrapper",
         .author = "The LineageOS Project",
         .methods = &module_methods,
         .dso = NULL, /* remove compilation warnings */

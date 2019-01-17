@@ -90,6 +90,9 @@ TARGET_HW_DISK_ENCRYPTION := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# UI
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
@@ -115,8 +118,12 @@ TARGET_FS_CONFIG_GEN := device/lenovo/kuntao/config.fs
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
+TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # GPU
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_USES_ION := true
@@ -125,21 +132,13 @@ TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_OVERLAY := true
 
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-MAX_EGL_CACHE_SIZE := 2048*1024
-
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-
-# Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
-
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := sched_enable_hmp=1 sched_enable_power_aware=1 console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.emmc=true androidboot.selinux=permissive firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE := sched_enable_hmp=1 sched_enable_power_aware=1 console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.emmc=true androidboot.selinux=permissive firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --tags_offset 0x00000100
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-TARGET_KERNEL_SOURCE := kernel/lenovo/msm8953
+TARGET_KERNEL_SOURCE := kernel/lenovo/silvercore
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -153,7 +152,6 @@ JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|device/lenovo/kuntao/lineagehw|**
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Partition
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_F2FS := true
@@ -183,12 +181,15 @@ TARGET_USES_INTERACTION_BOOST := true
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
-# Properties
+# IPA
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
+
+# Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lenovo/kuntao/rootdir/etc/fstab.qcom
@@ -206,14 +207,14 @@ TARGET_RIL_VARIANT := caf
 BOARD_SEPOLICY_VERS := 28.0
 
 # GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 USE_DEVICE_SPECIFIC_GPS := true
-TARGET_QCOM_NO_FM_FIRMWARE := true
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # Hidl manifests
 DEVICE_MANIFEST_FILE := device/lenovo/kuntao/manifest.xml
 DEVICE_MATRIX_FILE := device/lenovo/kuntao/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := device/lenovo/kuntao/framework_manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/lenovo/kuntao/vendor_framework_compatibility_matrix.xml
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
